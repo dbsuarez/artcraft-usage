@@ -2,6 +2,7 @@
 
 Verified on 2026-10-26 against `C:\Program Files\WordCraft\wordcraft-cli.exe`.
 Use `doclib.py` instead of writing commands by hand; `example.py` shows every helper.
+Every command and its parameters: [REFERENCE.md](REFERENCE.md) (search it, do not read it whole).
 
 ## Running
 

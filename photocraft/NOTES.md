@@ -2,6 +2,7 @@
 
 Verified **2026-10-27**, Windows PowerShell 5.1, `photocraft-cli 0.16.0 (b1794c6e0, 2026-10-25)`.
 Executable: `C:\Program Files\PhotoCraft\photocraft-cli.exe`. Use the CLI executable, not the desktop application.
+Every command and its parameters: [REFERENCE.md](REFERENCE.md) (search it, do not read it whole).
 
 ## Start here
 
