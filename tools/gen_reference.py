@@ -16,7 +16,8 @@ PROGRAMS = r"C:\Program Files"
 
 def exe(tool):
     name = {"deckcraft": "DeckCraft", "wordcraft": "WordCraft", "pdfcraft": "PdfCraft",
-            "soundcraft": "SoundCraft", "vectorcraft": "VectorCraft", "photocraft": "PhotoCraft"}[tool]
+            "soundcraft": "SoundCraft", "vectorcraft": "VectorCraft", "photocraft": "PhotoCraft",
+            "solidcraft": "SolidCraft"}[tool]
     return os.path.join(PROGRAMS, name, f"{tool}-cli.exe")
 
 
@@ -68,6 +69,12 @@ def photocraft():
     return "Use with `photocraft-cli run` or `photolib.py` (see NOTES.md).", table(rows)
 
 
+def solidcraft():
+    cmds = json.loads(sh(exe("solidcraft"), "commands"))
+    rows = [(f"`{c['id']}`", c.get("label", ""), c.get("params", "")) for c in cmds]
+    return "Use in a `run` script as `{\"command\": id, \"params\": {...}}` (see NOTES.md). Lengths are mm.", table(rows)
+
+
 def soundcraft():
     ids = [line.split()[0] for line in sh(exe("soundcraft"), "commands").splitlines() if line.strip()]
 
@@ -101,7 +108,8 @@ def pdfcraft():
 
 
 GENERATORS = {"deckcraft": deckcraft, "wordcraft": wordcraft, "pdfcraft": pdfcraft,
-              "soundcraft": soundcraft, "vectorcraft": vectorcraft, "photocraft": photocraft}
+              "soundcraft": soundcraft, "vectorcraft": vectorcraft, "photocraft": photocraft,
+              "solidcraft": solidcraft}
 
 
 def main(names):

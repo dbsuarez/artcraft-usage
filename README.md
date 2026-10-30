@@ -12,15 +12,16 @@ Each covered tool's folder has:
 - `REFERENCE.md`: every command with its parameters, generated from the CLI's own catalogue. Search it; it is large.
 - A helper (where commands are verbose) and `example.py`, which builds and renders something.
 
-| Tool | Notes | Reference | Helper | Example |
-| --- | --- | --- | --- | --- |
-| DeckCraft (slides) | [NOTES](deckcraft/NOTES.md) | [327 commands](deckcraft/REFERENCE.md) | [decklib.py](deckcraft/decklib.py) | [example.py](deckcraft/example.py) |
-| WordCraft (Word documents) | [NOTES](wordcraft/NOTES.md) | [643 commands](wordcraft/REFERENCE.md) | [doclib.py](wordcraft/doclib.py) | [example.py](wordcraft/example.py) |
-| PhotoCraft (images and sprites) | [NOTES](photocraft/NOTES.md) | [940 commands](photocraft/REFERENCE.md) | [photolib.py](photocraft/photolib.py) | [example.py](photocraft/example.py) |
-| PdfCraft (PDF) | [NOTES](pdfcraft/NOTES.md) | [179 tools](pdfcraft/REFERENCE.md) | | [example.py](pdfcraft/example.py) |
-| SoundCraft (audio) | [NOTES](soundcraft/NOTES.md) | [482 commands](soundcraft/REFERENCE.md) | | [example.py](soundcraft/example.py) |
-| VectorCraft (vector art) | [NOTES](vectorcraft/NOTES.md) | [811 commands](vectorcraft/REFERENCE.md) | | [example.py](vectorcraft/example.py) |
-| CADCraft, DesignCraft, EffectCraft, FigCraft, FilmCraft, LightCraft | Not yet | | | |
+| Tool | Notes | Reference | Helper | Example | Official docs |
+| --- | --- | --- | --- | --- | --- |
+| DeckCraft (slides) | [NOTES](deckcraft/NOTES.md) | [327 commands](deckcraft/REFERENCE.md) | [decklib.py](deckcraft/decklib.py) | [example.py](deckcraft/example.py) | [storytold/deckcraft](https://github.com/storytold/deckcraft) |
+| WordCraft (Word documents) | [NOTES](wordcraft/NOTES.md) | [643 commands](wordcraft/REFERENCE.md) | [doclib.py](wordcraft/doclib.py) | [example.py](wordcraft/example.py) | [storytold/wordcraft](https://github.com/storytold/wordcraft) |
+| PhotoCraft (images and sprites) | [NOTES](photocraft/NOTES.md) | [940 commands](photocraft/REFERENCE.md) | [photolib.py](photocraft/photolib.py) | [example.py](photocraft/example.py) | [storytold/photocraft](https://github.com/storytold/photocraft) |
+| PdfCraft (PDF) | [NOTES](pdfcraft/NOTES.md) | [179 tools](pdfcraft/REFERENCE.md) | | [example.py](pdfcraft/example.py) | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) |
+| SoundCraft (audio) | [NOTES](soundcraft/NOTES.md) | [482 commands](soundcraft/REFERENCE.md) | | [example.py](soundcraft/example.py) | [storytold/soundcraft](https://github.com/storytold/soundcraft) |
+| VectorCraft (vector art) | [NOTES](vectorcraft/NOTES.md) | [811 commands](vectorcraft/REFERENCE.md) | | [example.py](vectorcraft/example.py) | [storytold/vectorcraft](https://github.com/storytold/vectorcraft) |
+| SolidCraft (3D CAD parts) | [NOTES](solidcraft/NOTES.md) | [542 commands](solidcraft/REFERENCE.md) | | [example.py](solidcraft/example.py) | [tangency-labs/solidcraft](https://github.com/tangency-labs/solidcraft) |
+| CADCraft, DesignCraft, EffectCraft, FigCraft, FilmCraft, LightCraft | Not yet | | | | |
 
 ## Quick start
 
@@ -37,6 +38,8 @@ cd ../vectorcraft
 python example.py      # writes out/example.svg and out/example-vector.png
 cd ../soundcraft
 python example.py      # writes out/example-tone.wav and out/example-edited.flac
+cd ../solidcraft
+python example.py      # writes out/example-plate.step, .stl, .sc, and a PNG picture
 ```
 
 Needs Python 3 and the tools installed. `Slide.picture()` needs Pillow (`pip install pillow`).
